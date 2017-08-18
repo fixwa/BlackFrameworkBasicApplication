@@ -1,0 +1,21 @@
+{
+  "name": "fixwa/black-framework-basic-application",
+  "description": "A boilerplate application using the BlackFramework",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pablo",
+      "email": "fixwah@gmail.com"
+    }
+  ],
+  "require": {
+    "fixwa/black-framework": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:fixwa/BlackFramework.git"
+    }
+  ]
+}
