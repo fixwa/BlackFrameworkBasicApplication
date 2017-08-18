@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Assets/favicon.ico">
+
+    <title><?php echo \Black\Config::get('application')->website->title; ?></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link href="/Assets/css/application.css" rel="stylesheet">
+
+    <?php
+    if (!empty($this->styleSheets)) {
+        foreach ($this->styleSheets as $styleSheet) {
+            echo "<link href='{$styleSheet}' rel='stylesheet'>" . PHP_EOL;
+        }
+    }
+
+    if (!empty($this->javaScripts)) {
+        foreach ($this->javaScripts as $javaScript) {
+            echo "<script src='{$javaScript}'></script>" . PHP_EOL;
+        }
+    }
+    ?>
+</head>
+<body>
+<div class="container">
+    <?php
+    echo $this->partial('menu.phtml');
+    echo $TEMPLATE_CONTENT;
+    ?>
+    <hr>
+
+    <footer>
+        <p><?php echo \Black\Config::get('application')->website->footerFrontLegend; ?></p>
+    </footer>
+</div> <!-- /container -->
+</body>
+</html>

@@ -17,5 +17,10 @@
       "type": "vcs",
       "url": "git@github.com:fixwa/BlackFramework.git"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "Application\\": "./Application/"
+    }
+  }
 }
