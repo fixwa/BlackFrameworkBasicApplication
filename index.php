@@ -7,4 +7,5 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 $app = new Black\Application();
+$app->setAppBaseDir(__DIR__);
 $app->init();

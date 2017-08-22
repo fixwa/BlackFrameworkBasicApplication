@@ -6,4 +6,9 @@ class HomeController extends \Black\Controller
     {
         $this->view->txt = 'It works!';
     }
+
+    public function aboutAction()
+    {
+        return;
+    }
 }
